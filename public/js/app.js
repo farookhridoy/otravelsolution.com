@@ -653,6 +653,30 @@ var map = {
 		"./resources/js/Pages/Dashboard/Index.vue",
 		"resources_js_Pages_Dashboard_Index_vue"
 	],
+	"./GeneralPages/Create": [
+		"./resources/js/Pages/GeneralPages/Create.vue",
+		"resources_js_Pages_GeneralPages_Create_vue"
+	],
+	"./GeneralPages/Create.vue": [
+		"./resources/js/Pages/GeneralPages/Create.vue",
+		"resources_js_Pages_GeneralPages_Create_vue"
+	],
+	"./GeneralPages/Edit": [
+		"./resources/js/Pages/GeneralPages/Edit.vue",
+		"resources_js_Pages_GeneralPages_Edit_vue"
+	],
+	"./GeneralPages/Edit.vue": [
+		"./resources/js/Pages/GeneralPages/Edit.vue",
+		"resources_js_Pages_GeneralPages_Edit_vue"
+	],
+	"./GeneralPages/Index": [
+		"./resources/js/Pages/GeneralPages/Index.vue",
+		"resources_js_Pages_GeneralPages_Index_vue"
+	],
+	"./GeneralPages/Index.vue": [
+		"./resources/js/Pages/GeneralPages/Index.vue",
+		"resources_js_Pages_GeneralPages_Index_vue"
+	],
 	"./Organizations/Create": [
 		"./resources/js/Pages/Organizations/Create.vue",
 		"resources_js_Pages_Organizations_Create_vue"
@@ -846,7 +870,7 @@ module.exports = webpackAsyncContext;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_Auth_Login_vue":"2aebfd2970de9d4000e4","resources_js_Pages_Contacts_Create_vue":"077d5eeccdd10eaab747","resources_js_Pages_Contacts_Edit_vue":"727163ba713f565679ea","resources_js_Pages_Contacts_Index_vue":"0d7c9d68b60f72454877","resources_js_Pages_Dashboard_Index_vue":"854cb3dfd0bd6203e4b1","resources_js_Pages_Organizations_Create_vue":"4b33b3390ff8430a1ed5","resources_js_Pages_Organizations_Edit_vue":"8a3b35f988d54a774b75","resources_js_Pages_Organizations_Index_vue":"2e4057dd7858dcbf2528","resources_js_Pages_Reports_Index_vue":"a8b7a70d63b4a9270185","resources_js_Pages_Users_Create_vue":"6a837d2d5ca998fa3a4f","resources_js_Pages_Users_Edit_vue":"c7257f21587e566ce2b5","resources_js_Pages_Users_Index_vue":"4ab3143b338e4986fc19"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_Auth_Login_vue":"2aebfd2970de9d4000e4","resources_js_Pages_Contacts_Create_vue":"807768570e0eccbf9843","resources_js_Pages_Contacts_Edit_vue":"b7940c4d6f3b5b6b7101","resources_js_Pages_Contacts_Index_vue":"2e5e927cdba977b475b7","resources_js_Pages_Dashboard_Index_vue":"816c0d1de5b608a35e2b","resources_js_Pages_GeneralPages_Create_vue":"cb768968847bc79b38e0","resources_js_Pages_GeneralPages_Edit_vue":"f1d39183a5dd261f0467","resources_js_Pages_GeneralPages_Index_vue":"d3393e7ca108d5bc353f","resources_js_Pages_Organizations_Create_vue":"2290e513cdbcdeeb5021","resources_js_Pages_Organizations_Edit_vue":"4c96835ef52c8749c6fc","resources_js_Pages_Organizations_Index_vue":"8fca6588b56dad363fee","resources_js_Pages_Reports_Index_vue":"34aa1250d99cbea925e2","resources_js_Pages_Users_Create_vue":"e3f64538cbe3adf3c582","resources_js_Pages_Users_Edit_vue":"a088161e7e34ed081110","resources_js_Pages_Users_Index_vue":"791563f0df055317fa45"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	
