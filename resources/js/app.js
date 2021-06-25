@@ -16,7 +16,7 @@ const el = document.getElementById('app')
 
 new Vue({
   metaInfo: {
-    titleTemplate: title => (title ? `${title} - Ping CRM` : 'Ping CRM'),
+    titleTemplate: title => (title ? `${title} - Otravel Solution` : 'Otravel Solution'),
   },
   render: h =>
     h(App, {
