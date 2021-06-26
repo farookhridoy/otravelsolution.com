@@ -96,14 +96,62 @@ class GeneralPagesController extends Controller
         }
     }
 
-    public function edit()
+    public function edit($id)
     {
-        
+        return Inertia::render('GeneralPages/Edit', [
+            'generalpages' => GeneralPages::where('id',$id)->first(),
+            'status'=>['active','inactive','cancel']
+        ]);
     }
 
-    public function update()
+      /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+
+    public function update(Request $request, $id)
     {
-       
+       Validator::make($request->all(), [
+            'title' => ['required','max:100'],
+            'description' => ['required'],
+            'status' => ['required'],
+            'image_link' => ['nullable', 'image', 'max:1024'],
+        ])->validate();
+
+        $model=GeneralPages::find($id);
+        $input=$request->all();
+        $input['slug']=Str::slug($input['title']);
+
+        if($model){
+
+            $general_image = $request->image_link;
+                if($general_image) {
+                    $general_image_title = str_replace(' ', '-', $input['slug'] . '.' . $general_image->getClientOriginalExtension());
+                    $general_image_link = $this->general_image_relative_path.'/'.$general_image_title;
+                    Image::make($request->image_link)->save(public_path($general_image_link));
+                    $request->merge(['image_link' => $general_image_title]);
+                   
+                }else{
+                    $general_image_link = $model->image_link;
+                    $general_image_title = $model->image_link;
+                }
+
+                $input['image_link'] = $general_image_title;
+
+                if($general_data = $model->update($input)){
+
+                    if($general_image != null){
+                        File::Delete($model->image_link);
+                        $general_image->move($this->general_image_path, $general_image_title);
+                    }
+                    return Redirect::route('generalpages')->with('success', 'General Pages Updated Successfully.');
+                }
+        }else{
+            return Redirect::route('generalpages')->with('error', 'General Pages Not Found');
+        }
     }
 
     public function destroy(Request $request, $id)
