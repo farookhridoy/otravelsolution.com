@@ -10,9 +10,31 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Validation\Rule;
 use Inertia\Inertia;
+use Image;
+use File;
+use Str;
+use DB;
 
 class UsersController extends Controller
-{
+{   
+    
+    protected $user_image_path;
+    protected $user_image_relative_path;
+     /**
+     * generalController constructor.
+     */
+    public function __construct()
+    {
+        $this->user_image_path = public_path('uploads/user');
+        $this->user_image_relative_path = '/uploads/user';
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
     public function index()
     {
         return Inertia::render('Users/Index', [
@@ -27,7 +49,7 @@ class UsersController extends Controller
                         'name' => $user->name,
                         'email' => $user->email,
                         'owner' => $user->owner,
-                        'photo' => $user->photoUrl(['w' => 40, 'h' => 40, 'fit' => 'crop']),
+                        'photo' => $user->photo_path,
                         'deleted_at' => $user->deleted_at,
                     ];
                 }),
@@ -50,13 +72,29 @@ class UsersController extends Controller
             'photo' => ['nullable', 'image'],
         ]);
 
+        $input=Request::all();
+
+        $user_image = Request::file('photo');
+        if($user_image) {
+
+            $user_image_title = str_replace(' ', '-', $input['email'] . '.' . $user_image->getClientOriginalExtension());
+            $user_image_link = $this->user_image_relative_path.'/'.$user_image_title;
+            Image::make($input['photo'])->save(public_path($user_image_link));
+            Request::merge(['photo' => $user_image_title]);
+        }else{
+            $user_image_link = '';
+            $user_image_title = '';
+        }
+
+        $input['photo'] = $user_image_title;
+
         Auth::user()->account->users()->create([
             'first_name' => Request::get('first_name'),
             'last_name' => Request::get('last_name'),
             'email' => Request::get('email'),
             'password' => Request::get('password'),
             'owner' => Request::get('owner'),
-            'photo_path' => Request::file('photo') ? Request::file('photo')->store('users') : null,
+            'photo_path' => Request::file('photo') ? $input['photo'] : null,
         ]);
 
         return Redirect::route('users')->with('success', 'User created.');
@@ -71,7 +109,7 @@ class UsersController extends Controller
                 'last_name' => $user->last_name,
                 'email' => $user->email,
                 'owner' => $user->owner,
-                'photo' => $user->photoUrl(['w' => 60, 'h' => 60, 'fit' => 'crop']),
+                'photo' => $user->photo_path,
                 'deleted_at' => $user->deleted_at,
             ],
         ]);
@@ -95,7 +133,29 @@ class UsersController extends Controller
         $user->update(Request::only('first_name', 'last_name', 'email', 'owner'));
 
         if (Request::file('photo')) {
-            $user->update(['photo_path' => Request::file('photo')->store('users')]);
+
+            $input=Request::all();
+
+            $user_image = $input['photo'];
+            if($user_image) {
+
+                $user_image_title = str_replace(' ', '-', $input['email'] . '.' . $user_image->getClientOriginalExtension());
+                $user_image_link = $this->user_image_relative_path.'/'.$user_image_title;
+                Image::make($input['photo'])->save(public_path($user_image_link));
+                Request::merge(['photo' => $user_image_title]);
+            }else{
+                $user_image_link = $user->photo_path;
+                $user_image_title = $user->photo_path;
+            }
+
+            $input['photo'] = $user_image_title;
+
+            $user->update(['photo_path' => $input['photo']]);
+
+            if($user_image != null){
+                File::Delete($user->photo_path);
+                $user_image->move($this->user_image_path, $user_image_title);
+            }
         }
 
         if (Request::get('password')) {

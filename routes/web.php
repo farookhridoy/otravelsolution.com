@@ -49,3 +49,4 @@ Route::get('500', function () {
 
 // Generel Pages
 include('admin/general_route.php');
+include('admin/slider_route.php');

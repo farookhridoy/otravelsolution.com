@@ -709,6 +709,30 @@ var map = {
 		"./resources/js/Pages/Reports/Index.vue",
 		"resources_js_Pages_Reports_Index_vue"
 	],
+	"./Slider/Create": [
+		"./resources/js/Pages/Slider/Create.vue",
+		"resources_js_Pages_Slider_Create_vue"
+	],
+	"./Slider/Create.vue": [
+		"./resources/js/Pages/Slider/Create.vue",
+		"resources_js_Pages_Slider_Create_vue"
+	],
+	"./Slider/Edit": [
+		"./resources/js/Pages/Slider/Edit.vue",
+		"resources_js_Pages_Slider_Edit_vue"
+	],
+	"./Slider/Edit.vue": [
+		"./resources/js/Pages/Slider/Edit.vue",
+		"resources_js_Pages_Slider_Edit_vue"
+	],
+	"./Slider/Index": [
+		"./resources/js/Pages/Slider/Index.vue",
+		"resources_js_Pages_Slider_Index_vue"
+	],
+	"./Slider/Index.vue": [
+		"./resources/js/Pages/Slider/Index.vue",
+		"resources_js_Pages_Slider_Index_vue"
+	],
 	"./Users/Create": [
 		"./resources/js/Pages/Users/Create.vue",
 		"resources_js_Pages_Users_Create_vue"
@@ -870,7 +894,7 @@ module.exports = webpackAsyncContext;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_Auth_Login_vue":"2aebfd2970de9d4000e4","resources_js_Pages_Contacts_Create_vue":"807768570e0eccbf9843","resources_js_Pages_Contacts_Edit_vue":"b7940c4d6f3b5b6b7101","resources_js_Pages_Contacts_Index_vue":"2e5e927cdba977b475b7","resources_js_Pages_Dashboard_Index_vue":"816c0d1de5b608a35e2b","resources_js_Pages_GeneralPages_Create_vue":"7f12b6d8cd0b6f9b94d4","resources_js_Pages_GeneralPages_Edit_vue":"8eef111e4f8b3d28cbec","resources_js_Pages_GeneralPages_Index_vue":"855b010c175165541226","resources_js_Pages_Organizations_Create_vue":"2290e513cdbcdeeb5021","resources_js_Pages_Organizations_Edit_vue":"4c96835ef52c8749c6fc","resources_js_Pages_Organizations_Index_vue":"8fca6588b56dad363fee","resources_js_Pages_Reports_Index_vue":"34aa1250d99cbea925e2","resources_js_Pages_Users_Create_vue":"e3f64538cbe3adf3c582","resources_js_Pages_Users_Edit_vue":"a088161e7e34ed081110","resources_js_Pages_Users_Index_vue":"791563f0df055317fa45"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_Auth_Login_vue":"2aebfd2970de9d4000e4","resources_js_Pages_Contacts_Create_vue":"9b09092f67a536d1e488","resources_js_Pages_Contacts_Edit_vue":"12a45e3a6151584ed7a5","resources_js_Pages_Contacts_Index_vue":"c91b75e7586963be6675","resources_js_Pages_Dashboard_Index_vue":"d0b9d26645a2abef9566","resources_js_Pages_GeneralPages_Create_vue":"2993c535e66d35259553","resources_js_Pages_GeneralPages_Edit_vue":"586b5c3b2795c41f148d","resources_js_Pages_GeneralPages_Index_vue":"67f38bbc223e9c536f49","resources_js_Pages_Organizations_Create_vue":"dbf26aa0f4d7a022b193","resources_js_Pages_Organizations_Edit_vue":"d47367cc75834154c70b","resources_js_Pages_Organizations_Index_vue":"3e66c99ba4ad813ef801","resources_js_Pages_Reports_Index_vue":"f227bb6cff342242b71e","resources_js_Pages_Slider_Create_vue":"ee0b30d3f4b88a126a89","resources_js_Pages_Slider_Edit_vue":"e99a60d8fbecb9765f86","resources_js_Pages_Slider_Index_vue":"a7d695e1407fee438a4d","resources_js_Pages_Users_Create_vue":"9b42b99ab4cd2438254c","resources_js_Pages_Users_Edit_vue":"15f1890d0e322f88d5b6","resources_js_Pages_Users_Index_vue":"1c3b721b236f8249c2ad"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

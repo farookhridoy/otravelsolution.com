@@ -30,6 +30,12 @@
         <div :class="isUrl('generalpages') ? 'text-white' : 'text-indigo-300 group-hover:text-white'">Generel Pages</div>
       </inertia-link>
     </div>
+    <div class="mb-4">
+      <inertia-link class="flex items-center group py-3" :href="route('slider')">
+        <icon name="cheveron-right" class="w-4 h-4 mr-2" :class="isUrl('slider') ? 'fill-white' : 'fill-indigo-400 group-hover:fill-white'" />
+        <div :class="isUrl('slider') ? 'text-white' : 'text-indigo-300 group-hover:text-white'">Slider</div>
+      </inertia-link>
+    </div>
   </div>
 </template>
 
