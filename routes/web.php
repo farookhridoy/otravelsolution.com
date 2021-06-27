@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Web\WebController;
 use App\Http\Controllers\Admin\ImagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 // Auth
 include('auth/auth_route.php');
 // Dashboard
-Route::get('/', [DashboardController::class, 'index'])
+Route::get('/dashboard', [DashboardController::class, 'index'])
     ->name('dashboard')
     ->middleware('auth');
 // Users
@@ -50,3 +51,7 @@ Route::get('500', function () {
 // Generel Pages
 include('admin/general_route.php');
 include('admin/slider_route.php');
+
+//home controllers
+
+Route::get('/', [WebController::class, 'index'])->middleware('web');
