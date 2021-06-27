@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use App\Models\Slider;
 use App\Models\GeneralPages;
+use App\Models\Subscription;
 use Image;
 use File;
 use Str;

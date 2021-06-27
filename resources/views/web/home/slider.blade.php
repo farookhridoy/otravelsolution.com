@@ -10,7 +10,7 @@
 
         <div class="caption lfb large-title tp-resizeme slidertext1" data-x="center" data-y="310" data-speed="600" data-start="1600">{{$sliderdata->caption}}</div>
 
-        <div class="caption lfb large-title tp-resizeme sliderbtn" data-x="center" data-y="400" data-speed="600" data-start="2200"><a href="{{$sliderdata->route}}" class="section-btn">Get Started</a></div>
+        <div class="caption lfb large-title tp-resizeme sliderbtn" data-x="center" data-y="400" data-speed="600" data-start="2200"><a href="{{URL::to($sliderdata->route)}}" class="section-btn">Get Started</a></div>
       </li>
       @endforeach
       @endif  
