@@ -58,7 +58,7 @@
 			<div class="row">
 				<div class="col-md-12 col-sm-12">
 					<div class="footer-copyright">
-						<p>&copy; 2021 Otravelsolution | All Rights Reserved. | Design & Developed By theLaraSoft</p>
+						<p>&copy; 2021 Otravelsolution | All Rights Reserved. | Design & Developed By Softme Limited</p>
 					</div>
 				</div>
 			</div>
