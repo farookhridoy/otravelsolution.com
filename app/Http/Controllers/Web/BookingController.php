@@ -32,9 +32,11 @@ class BookingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function airport()
     {
-        //
+        $pageTitle="Airport Booking";
+
+        return view('web.pages.airport_booking',compact('pageTitle'));
     }
 
     /**
@@ -64,7 +66,7 @@ class BookingController extends Controller
 
                 $model=Booking::create($input);
 
-                $send_to="gmfaruk2021@gmail.com";
+                $send_to="booking@otravelsolution.com";
 
                 if(isset($input['email'])){
 
@@ -78,7 +80,55 @@ class BookingController extends Controller
                 DB::commit();
 
                 Session::flash('message', 'Thanks for your message.We will contact you very soon');
-                
+
+                return redirect()->back();
+            } 
+            catch(\Exception $e) {
+                DB::rollback();
+                return Redirect::back()->with('danger', $e->getMessage());
+            }
+        }
+    }
+     /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function airport_store(Request $request)
+    {
+        Validator::make($request->all(), [
+            'name' => ['required','max:100'],
+            'email' => ['required','email','max:50'],
+            'phone' => ['required','max:32'],
+            'vehicle_type' => ['required'],
+            'pickup' => ['required'],
+            'dropoff' => ['required'],
+            'pickup_date' => ['required'],
+            'flight_details' => ['required'],
+            'no_of_passengers' => ['required'],
+        ])->validate();
+
+        $input = $request->all();
+        if($input)
+        {
+            DB::beginTransaction();
+            try {
+
+                $model=Booking::create($input);
+
+                $send_to="airport@otravelsolution.com";
+
+                if(isset($input['email'])){
+                    $mail_body = \Illuminate\Support\Facades\View::make('web.emailBody.airport', ['data'=> $input]);
+                    $contents = $mail_body->render();
+                    $send_mail = \App\Http\Helpers\SendMail::fire($send_to, 'Airport booking email', $contents, '');
+                }else{
+                    Session::flash('danger', "email incorrect.");
+                }
+
+                DB::commit();
+                Session::flash('message', 'Thanks for your message.We will contact you very soon');
                 return redirect()->back();
             } 
             catch(\Exception $e) {

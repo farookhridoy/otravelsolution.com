@@ -195,6 +195,7 @@
   <input type="text" class="form-control" placeholder="Phone" name="phone" required>
   <input type="hidden" name="type" value="booking">
   <input type="hidden" name="paymnet_type" value="Cash">
+  <input type="hidden" name="status" value="active">
 </div>
 </div>
 <div class="col-md-12 col-sm-12">

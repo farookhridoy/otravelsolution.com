@@ -25,6 +25,7 @@ class Booking extends Model
         'return_date',
         'return_time',
         'no_of_passengers',
+        'luggage',
         'vehicle_type',
         'paymnet_type',
         'driver_note',

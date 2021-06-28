@@ -61,6 +61,10 @@ Route::post('get-in-touch', [WebController::class, 'store'])
     ->name('web.contact.store');
 //booking controllers
 Route::get('/booking', [BookingController::class, 'index'])->middleware('web');
+Route::get('/airport', [BookingController::class, 'airport'])->middleware('web');
 
 Route::post('booking-submit', [BookingController::class, 'store'])
     ->name('web.booking.store')->middleware('web');
+
+Route::post('airport-submit', [BookingController::class, 'airport_store'])
+    ->name('web.airport.booking.store')->middleware('web');
