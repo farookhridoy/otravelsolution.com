@@ -17,8 +17,7 @@
         <li><a href="{{URL::to('/booking')}}" class="smoothScroll">Booking</a></li>
         <li><a href="{{URL::to('/airport')}}" class="smoothScroll">Airport</a></li>
         <li><a href="{{URL::to('/wedding')}}" class="smoothScroll">Wedding</a></li>
-        <li><a href="{{URL::to('/contact')}}" class="smoothScroll">Contact</a></li>
-        <li><span class="calltxt"><i class="fa fa-phone" aria-hidden="true"></i> 123 456 7890</span></li>
+        <li><span class="calltxt"><i class="fa fa-phone" aria-hidden="true"></i> {{config('system_config.phone')}}</span></li>
       </ul>
     </div>
   </div>

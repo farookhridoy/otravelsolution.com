@@ -119,7 +119,7 @@
 
 
 <!-- Testimonials Section -->
-<div id="testimonials">
+{{-- <div id="testimonials">
    <div class="container"> 
 
     <!-- Section Title -->
@@ -145,7 +145,7 @@
 
 </ul>
 </div>
-</div>
+</div> --}}
 
 
 <!-- Newsletter-->
@@ -179,16 +179,19 @@
   <!-- CONTACT FORM HERE -->
   <div class="row">
      <div class="col-md-8">
+      <div class="contact-form" style="margin:15px;">
+        @include("web.layouts.notification")
+      </div>
        <div class="contact-form">
-         <form id="contact-form" class="row" action="#" method="POST">
+         {!! Form::open(['route' => 'web.contact.store',  'files'=> false, 'id'=>'contact-form', 'class' => 'form-horizontal']) !!}
            <div class="col-md-6 col-sm-6">
-             <input type="text" class="form-control" name="name" placeholder="Name" required  >
+             <input type="text" class="form-control" name="first_name" placeholder="Name" required  >
           </div>
           <div class="col-md-6 col-sm-6">
              <input type="email" class="form-control" name="email" placeholder="Email" required >
           </div>
           <div class="col-md-6 col-sm-12">
-             <input type="tel" class="form-control" name="phone" placeholder="Phone">
+             <input type="number" class="form-control" name="phone" placeholder="Phone">
           </div>
           <div class="col-md-6 col-sm-12">
              <input type="text" class="form-control" name="address" placeholder="Address">
@@ -197,9 +200,10 @@
              <textarea class="form-control" rows="5" name="message" placeholder="Message"></textarea>
           </div>
           <div class="col-md-12">
-             <button id="submit" type="submit" class="form-control" name="submit">Send Message</button>
+             <button id="submit" type="submit" class="form-control">Send Message</button>
           </div>
-       </form>
+          <input type="hidden" name="account_id" value="1">
+        {!! Form::close() !!}
     </div>
  </div>
  <div class="col-md-4">

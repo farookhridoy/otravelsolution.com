@@ -8,6 +8,23 @@ class Contact extends Model
 {
     use SoftDeletes;
 
+    protected $table='contacts';
+    
+    protected $fillable = [
+        'account_id',
+        'organization_id',
+        'first_name',
+        'last_name',
+        'email',
+        'phone',
+        'address',
+        'city',
+        'region',
+        'country',
+        'postal_code',
+        'messages',
+    ];
+
     public function organization()
     {
         return $this->belongsTo(Organization::class);

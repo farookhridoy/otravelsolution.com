@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Web\WebController;
+use App\Http\Controllers\Web\BookingController;
 use App\Http\Controllers\Admin\ImagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -55,3 +56,11 @@ include('admin/slider_route.php');
 //home controllers
 
 Route::get('/', [WebController::class, 'index'])->middleware('web');
+
+Route::post('get-in-touch', [WebController::class, 'store'])
+    ->name('web.contact.store');
+//booking controllers
+Route::get('/booking', [BookingController::class, 'index'])->middleware('web');
+
+Route::post('booking-submit', [BookingController::class, 'store'])
+    ->name('web.booking.store')->middleware('web');

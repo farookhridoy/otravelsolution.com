@@ -4,9 +4,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="x-apple-disable-message-reformatting">
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-	<title>Registration email</title>
+	<title>Car Booking Email </title>
 
-	<!-- scripts -->
+	
 	<style type="text/css">
 	* {
 		font-family: 'Poppins', 'Poppins', sans-serif;
@@ -52,7 +52,7 @@
 		height: 22px !important;
 	}
 
-	/* ====== Client-specific Styles Bring inline: No ====== */
+	
 	#outlook a {
 		padding: 0;
 	}
@@ -225,13 +225,13 @@
 </head>
 <body style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;margin: 0;padding: 0;mso-margin-top-alt: 0px;mso-margin-bottom-alt: 0px;mso-padding-alt: 0px 0px 0px 0px;font-family: Arial,sans-serif;width: 100% !important;background-color: #f0f0f0;"class="wrapper-color">
 
-	<!-- Wrapper Table -->
+
 	<table style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;margin: 0;padding: 0;width: 100% !important;line-height: 100% !important;background-color: #222222;"class="wrapper-color" border="0" cellpadding="0" cellspacing="0" width="100%">
 		<tbody>
 			<tr>
 				<td align="center" valign="top">
 					<ul class="ui-sortable" id="itb">
-						<!-- ======= HEADING AREA START ====== -->
+
 						<table style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" class="container" align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="620">
 							<tbody>
 								<tr>
@@ -242,101 +242,87 @@
 													<td class="h1" style="font-family: 'Poppins', sans-serif; color:#4285f4; font-weight:600; line-height:20px; font-size: 14px; text-decoration:none;   padding-bottom:10px;">
 														<div class="rocket-txt">
 
-															<center><a href="http://alkabirtravels.com"><img src="http://alkabirtravels.com/logo/logo.png" style="height: 50px;" alt="img"></a>
+															<center>
+																<a href="http://otravelsolution.com/"><img src="http://otravelsolution.com/logo/logo.jpg" style="height: 50px;" alt="img">
+																</a>
 															</center>
 														</td>
-														
+
 													</tr>
 													<tr>
 														<td class="h1" style="font-family: 'Poppins', sans-serif; color:#4285f4; font-weight:600; line-height:20px; font-size: 14px; text-decoration:none; text-align: right;   padding-bottom:10px;">
 															<center><div  class="rocket-txt"><span class="wrap_textbox">
-																<a style="color: #04a9e8; font-size: 16px"  href="tel:02037700611">Hotline :: 02037700611 </a></span></div></center>
+																<a style="color: #04a9e8; font-size: 16px"  href="tel: {{config('system_config.phone')}}">Hotline :: {{config('system_config.phone')}}</a></span></div></center>
 															</td>
 														</tr>
-                                               
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- ======= HEADING AREA END ====== -->
 
-                        <!-- ======= FEATURE AREA START ====== -->
-                        <table style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" class="container" align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="620">
-                        	<tbody>
-                        		<tr>
-                        			<td style="padding-top:0px;" align="center" valign="top">
-                        				<table style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" class="innercontainer" align="center" border="0" cellpadding="0" cellspacing="0" width="620">
-                        					<tbody>
-                        						<tr>
-                        							<td style="" align="left">
-                        								<table style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
-                        									<tbody>
-                        										<!-- <tr>
-                        											image 540x200
-                        											<td align="center">
-                        												<a href="#" class="modimg" style="color:#8e44ad;">
-                        													<img src="images/westran-clothing.jpg" alt="" style="width:100%;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;border: none;display:block;" class="banner" >
-                        												</a>
-                        											</td>
-                        										</tr> -->
-                        										<!-- image 540x200 -->
-                        										<tr style="">
-                        											<td class="text" style="font-family: 'Poppins', sans-serif; color:#383838; font-weight:400; line-height:26px; font-size: 14px; text-decoration:none; padding:66px 20px 68px; background: #dbffd2">
-                        												<div class="rocket-txt">
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
 
-                        													<h3 style="font-weight: normal; font-size: 25px; text-transform: capitalize;">Dear {{$user_data->first_name}}</h3>
+								<table style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" class="container" align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="620">
+									<tbody>
+										<tr>
+											<td style="padding-top:0px;" align="center" valign="top">
+												<table style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" class="innercontainer" align="center" border="0" cellpadding="0" cellspacing="0" width="620">
+													<tbody>
+														<tr>
+															<td style="" align="left">
+																<table style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+																	<tbody>
+
+																		<tr style="">
+																			<td class="text" style="font-family: 'Poppins', sans-serif; color:#383838; font-weight:400; line-height:26px; font-size: 14px; text-decoration:none; padding:66px 20px 68px; background: #dbffd2">
+																				<div class="rocket-txt">
+
+																					<h3 style="font-weight: normal; font-size: 16px; text-transform: capitalize;">Car Booking Details</h3>
+
+																					<span style="display: block; padding-bottom: 10px " class="wrap_textbox">Name : {{$data['name']}} </span>
+																					<span style="display: block; padding-bottom: 10px " class="wrap_textbox">Email : {{$data['email']}} </span>
+																					<span style="display: block; padding-bottom: 10px " class="wrap_textbox">Phone : {{$data['phone']}} </span>
+																					<span style="display: block; padding-bottom: 10px " class="wrap_textbox">Vehicle type : {{$data['vehicle_type']}} </span>
+																					<span style="display: block; padding-bottom: 10px " class="wrap_textbox">No Of Passengers : {{$data['no_of_passengers']}} </span>
+
+																					<span style="display: block; padding-bottom: 10px " class="wrap_textbox">Pickup Date : {{$data['pickup_date']}} </span>
+																					<span style="display: block; padding-bottom: 10px " class="wrap_textbox">Pickup : {{$data['pickup']}} </span>
+																					<span style="display: block; padding-bottom: 10px " class="wrap_textbox">Dropup : {{$data['dropoff']}} </span>
+
+																					<span style="display: block; padding-bottom: 10px " class="wrap_textbox">Return Journey : {{isset($data['return_journey'])?'YES':'No'}} </span>
+
+																					<span style="display: block; padding-bottom: 10px " class="wrap_textbox">Return Date : {{isset($data['return_journey'])?$data['return_date']:''}} </span>
 
 
-                        													<span style="display: block; padding-bottom: 10px " class="wrap_textbox">You have successfully created a Alkabir account. Please click on the link below to verify your email address and complete the registration</span>
+																					<span style="display: block; padding-bottom: 10px " class="wrap_textbox">Payment Type : {{$data['paymnet_type']}} </span>
 
-                        													<span style="display: block; padding-bottom: 10px " class="wrap_textbox"><a style=" display: block;
-                        													padding: 8px 20px;
-                        													background: #ff6429;
-                        													color: #fff;
-                        													text-align: center;
-                        													text-transform: uppercase;
-                        													font-size: 14px;
-                        													width: 250px;
-                        													border-radius: 3px;
-                        													text-decoration: none;
-                        													margin: auto;" href="{{URL::to('laangela/confirm-email')}}/{{$user_data->remember_token}}"> please verified your email</a></span>
+																					<span style="display: block; padding-bottom: 10px " class="wrap_textbox">Driver Note: {{$data['driver_note']}}</span>
 
-                        													<span style="display: block; padding-bottom: 10px " class="wrap_textbox">Don't Create Alkabir account?? It's likely someone else just type in your email address by accident . Feel free to ignore this account.</span>
+																				</div>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
 
-                        													<span style="display: block; padding-bottom: 10px " class="wrap_textbox">Regards, <br>
-                                                                            Alkabir
-                                                                            </span>
-                        													
+							</td>
+						</tr>
+					</tbody>
+				</table>
 
-                        												</div>
-                        											</td>
-                        										</tr>
-                        									</tbody>
-                        								</table>
-                        							</td>
-                        						</tr>
-                        					</tbody>
-                        				</table>
-                        			</td>
-                        		</tr>
-                        	</tbody>
-                        </table>
-
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <!-- ======= FOOTER AREA END ====== -->
-
-    </ul>
-</td>
-</tr>
+			</ul>
+		</td>
+	</tr>
 </tbody>
 </table>
-<!-- Wrapper Table Ends -->
-
 
 </body>
 </html>
