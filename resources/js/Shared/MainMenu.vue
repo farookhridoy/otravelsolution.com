@@ -36,6 +36,25 @@
         <div :class="isUrl('slider') ? 'text-white' : 'text-indigo-300 group-hover:text-white'">Slider</div>
       </inertia-link>
     </div>
+
+    <div class="mb-4">
+      <inertia-link class="flex items-center group py-3" :href="route('booking-list')">
+        <icon name="users" class="w-4 h-4 mr-2" :class="isUrl('booking-list') ? 'fill-white' : 'fill-indigo-400 group-hover:fill-white'" />
+        <div :class="isUrl('booking-list') ? 'text-white' : 'text-indigo-300 group-hover:text-white'">Booking List</div>
+      </inertia-link>
+    </div>
+    <div class="mb-4">
+      <inertia-link class="flex items-center group py-3" :href="route('airport-list')">
+        <icon name="users" class="w-4 h-4 mr-2" :class="isUrl('airport-list') ? 'fill-white' : 'fill-indigo-400 group-hover:fill-white'" />
+        <div :class="isUrl('airport-list') ? 'text-white' : 'text-indigo-300 group-hover:text-white'">Airport List</div>
+      </inertia-link>
+    </div>
+    <div class="mb-4">
+      <inertia-link class="flex items-center group py-3" :href="route('wedding-list')">
+        <icon name="users" class="w-4 h-4 mr-2" :class="isUrl('wedding-list') ? 'fill-white' : 'fill-indigo-400 group-hover:fill-white'" />
+        <div :class="isUrl('wedding-list') ? 'text-white' : 'text-indigo-300 group-hover:text-white'">Wedding List</div>
+      </inertia-link>
+    </div>
   </div>
 </template>
 

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Web\WebController;
 use App\Http\Controllers\Web\BookingController;
+use App\Http\Controllers\Web\WeddingBookingController;
 use App\Http\Controllers\Admin\ImagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,10 @@ include('auth/auth_route.php');
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->name('dashboard')
     ->middleware('auth');
+
+Route::get('/booking-list', [DashboardController::class, 'booking_list'])->name('booking-list')->middleware('auth');
+Route::get('/airport-list', [DashboardController::class, 'airport_list'])->name('airport-list')->middleware('auth');
+Route::get('/wedding-list', [DashboardController::class, 'wedding_list'])->name('wedding-list')->middleware('auth');
 // Users
 
 include('admin/default/user_route.php');
@@ -59,12 +64,17 @@ Route::get('/', [WebController::class, 'index'])->middleware('web');
 
 Route::post('get-in-touch', [WebController::class, 'store'])
     ->name('web.contact.store');
+
 //booking controllers
 Route::get('/booking', [BookingController::class, 'index'])->middleware('web');
 Route::get('/airport', [BookingController::class, 'airport'])->middleware('web');
+Route::get('/wedding', [WeddingBookingController::class, 'index'])->middleware('web');
 
 Route::post('booking-submit', [BookingController::class, 'store'])
     ->name('web.booking.store')->middleware('web');
 
 Route::post('airport-submit', [BookingController::class, 'airport_store'])
     ->name('web.airport.booking.store')->middleware('web');
+
+Route::post('wedding-submit', [WeddingBookingController::class, 'store'])
+    ->name('web.wedding.booking.store')->middleware('web');

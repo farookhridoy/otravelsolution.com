@@ -645,6 +645,22 @@ var map = {
 		"./resources/js/Pages/Contacts/Index.vue",
 		"resources_js_Pages_Contacts_Index_vue"
 	],
+	"./Dashboard/Airport": [
+		"./resources/js/Pages/Dashboard/Airport.vue",
+		"resources_js_Pages_Dashboard_Airport_vue"
+	],
+	"./Dashboard/Airport.vue": [
+		"./resources/js/Pages/Dashboard/Airport.vue",
+		"resources_js_Pages_Dashboard_Airport_vue"
+	],
+	"./Dashboard/Booking": [
+		"./resources/js/Pages/Dashboard/Booking.vue",
+		"resources_js_Pages_Dashboard_Booking_vue"
+	],
+	"./Dashboard/Booking.vue": [
+		"./resources/js/Pages/Dashboard/Booking.vue",
+		"resources_js_Pages_Dashboard_Booking_vue"
+	],
 	"./Dashboard/Index": [
 		"./resources/js/Pages/Dashboard/Index.vue",
 		"resources_js_Pages_Dashboard_Index_vue"
@@ -652,6 +668,14 @@ var map = {
 	"./Dashboard/Index.vue": [
 		"./resources/js/Pages/Dashboard/Index.vue",
 		"resources_js_Pages_Dashboard_Index_vue"
+	],
+	"./Dashboard/Weeding": [
+		"./resources/js/Pages/Dashboard/Weeding.vue",
+		"resources_js_Pages_Dashboard_Weeding_vue"
+	],
+	"./Dashboard/Weeding.vue": [
+		"./resources/js/Pages/Dashboard/Weeding.vue",
+		"resources_js_Pages_Dashboard_Weeding_vue"
 	],
 	"./GeneralPages/Create": [
 		"./resources/js/Pages/GeneralPages/Create.vue",
@@ -894,7 +918,7 @@ module.exports = webpackAsyncContext;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_Auth_Login_vue":"2aebfd2970de9d4000e4","resources_js_Pages_Contacts_Create_vue":"9b09092f67a536d1e488","resources_js_Pages_Contacts_Edit_vue":"12a45e3a6151584ed7a5","resources_js_Pages_Contacts_Index_vue":"c91b75e7586963be6675","resources_js_Pages_Dashboard_Index_vue":"d0b9d26645a2abef9566","resources_js_Pages_GeneralPages_Create_vue":"2993c535e66d35259553","resources_js_Pages_GeneralPages_Edit_vue":"586b5c3b2795c41f148d","resources_js_Pages_GeneralPages_Index_vue":"67f38bbc223e9c536f49","resources_js_Pages_Organizations_Create_vue":"dbf26aa0f4d7a022b193","resources_js_Pages_Organizations_Edit_vue":"d47367cc75834154c70b","resources_js_Pages_Organizations_Index_vue":"3e66c99ba4ad813ef801","resources_js_Pages_Reports_Index_vue":"f227bb6cff342242b71e","resources_js_Pages_Slider_Create_vue":"ee0b30d3f4b88a126a89","resources_js_Pages_Slider_Edit_vue":"e99a60d8fbecb9765f86","resources_js_Pages_Slider_Index_vue":"a7d695e1407fee438a4d","resources_js_Pages_Users_Create_vue":"9b42b99ab4cd2438254c","resources_js_Pages_Users_Edit_vue":"15f1890d0e322f88d5b6","resources_js_Pages_Users_Index_vue":"1c3b721b236f8249c2ad"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_Auth_Login_vue":"2aebfd2970de9d4000e4","resources_js_Pages_Contacts_Create_vue":"c8fc78ee929146542617","resources_js_Pages_Contacts_Edit_vue":"3d7c0178e7f99f87aeed","resources_js_Pages_Contacts_Index_vue":"2421081f7f3736872ed6","resources_js_Pages_Dashboard_Airport_vue":"73bf1ffeaac02e952d10","resources_js_Pages_Dashboard_Booking_vue":"ea4eb8fd5f8a2b65ebd8","resources_js_Pages_Dashboard_Index_vue":"a8ecf493df9637b7f33c","resources_js_Pages_Dashboard_Weeding_vue":"2b4195c157014a048b64","resources_js_Pages_GeneralPages_Create_vue":"47997d230699710ec4e6","resources_js_Pages_GeneralPages_Edit_vue":"3203e2047ae49b9c544c","resources_js_Pages_GeneralPages_Index_vue":"26cabef6527ec8dd0cc9","resources_js_Pages_Organizations_Create_vue":"b95903e4d3e1eb2e0416","resources_js_Pages_Organizations_Edit_vue":"fe7688bcc60bc4b59d10","resources_js_Pages_Organizations_Index_vue":"9066746ab9bd74e9160d","resources_js_Pages_Reports_Index_vue":"52d0d6816775063a6ace","resources_js_Pages_Slider_Create_vue":"c590795f73452eea189d","resources_js_Pages_Slider_Edit_vue":"043c12db158050fd2f77","resources_js_Pages_Slider_Index_vue":"b979a303ded5ff11673f","resources_js_Pages_Users_Create_vue":"cad66efa3565a02fe900","resources_js_Pages_Users_Edit_vue":"1f908c96dae6a996f7b7","resources_js_Pages_Users_Index_vue":"83520cd229d9c5190282"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	
