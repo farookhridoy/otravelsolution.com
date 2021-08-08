@@ -78,3 +78,7 @@ Route::post('airport-submit', [BookingController::class, 'airport_store'])
 
 Route::post('wedding-submit', [WeddingBookingController::class, 'store'])
     ->name('web.wedding.booking.store')->middleware('web');
+
+Route::get('/offline', function () {
+    return view('vendor.laravelpwa.offline');
+});

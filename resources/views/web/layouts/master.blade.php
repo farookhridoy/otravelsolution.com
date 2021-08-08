@@ -24,6 +24,8 @@
 	<link rel="stylesheet" href="{{URL::to('frontend')}}/css/owl.carousel.css">
 	<!-- Main css -->
 	<link rel="stylesheet" href="{{URL::to('frontend')}}/css/style-blue.css">
+	
+	@laravelPWA
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
